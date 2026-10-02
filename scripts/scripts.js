@@ -1,6 +1,9 @@
 document.addEventListener("DOMContentLoaded", function() {
-    var data = window.location.pathname;
-    document.querySelector("#content").innerHTML = data;
+var location = window.location.pathname;
+var path = location.substring(0, location.lastIndexOf("/"));
+var directoryName = path.substring(path.lastIndexOf("/")+1);
+
+    document.querySelector("#content").innerHTML = path;
     //loadGallery();
 });
 
