@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 function loadAboutUs() {
-    fetch("CoffeeShop/About.html")
+    fetch("/CoffeeShop/About.html")
         .then(response => {
             return response.text()
         })
