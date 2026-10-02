@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function() {
      const list = fetch(dir.url).then(res => res.json());
      r =  list.then(data => data.tree.map(node => node.path));
   }
-}
+
 
     r.then(data => {
         document.querySelector("#content").innerHTML = data;
