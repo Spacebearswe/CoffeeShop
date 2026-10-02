@@ -13,7 +13,7 @@ function loadAboutUs() {
 }
 
 function loadProducts() {
-    fetch("Products.html")
+    fetch("../Products.html")
         .then(response => {
             return response.text()
         })
