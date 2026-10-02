@@ -1,11 +1,11 @@
 document.addEventListener("DOMContentLoaded", function() {
-    var loc = window.location.pathname;
-    alert(var);
+    var data = window.location.pathname;
+    document.querySelector("#content").innerHTML = data;
     //loadGallery();
 });
 
 function loadAboutUs() {
-    fetch("../About.html")
+    fetch("About.html")
         .then(response => {
             return response.text()
         })
@@ -15,7 +15,7 @@ function loadAboutUs() {
 }
 
 function loadProducts() {
-    fetch("../Products.html")
+    fetch("Products.html")
         .then(response => {
             return response.text()
         })
@@ -44,7 +44,7 @@ function loadContact() {
         });
 }
 function loadGallery() {
-    fetch("Gallery.html")
+    fetch("/Gallery.html")
         .then(response => {
             return response.text()
         })
