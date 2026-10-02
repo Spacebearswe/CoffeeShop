@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function() {
     var loc = window.location.pathname;
-    alert(var)
+    alert(var);
     loadGallery();
 });
 
