@@ -8,7 +8,7 @@ var directoryName = path.substring(path.lastIndexOf("/")+1);
 });
 
 function loadAboutUs() {
-    fetch("/CoffeeShop/About.html")
+    fetch("/CoffeeShop/artifacts/About.html")
         .then(response => {
             return response.text()
         })
