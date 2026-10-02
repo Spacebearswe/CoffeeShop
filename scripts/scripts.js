@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 function loadAboutUs() {
-    fetch("About.html")
+    fetch("/About.html")
         .then(response => {
             return response.text()
         })
