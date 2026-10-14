@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function () {
     loadGallery();
 });
 
-function loadAbout1() {
+function loadAbout() {
     // Load the About section content directly without fetching an external file
     // I have problems to load this content from an external file, 
     // so it's hardcoded here. as I don't find the right filepath in github pages.
@@ -28,7 +28,7 @@ function loadAbout1() {
     document.querySelector("#content").innerHTML = data;
 }
 
-function loadProducts1() {
+function loadProducts() {
     // html from Products.html
     var data = "<h3>Welcome to our coffee shop!</h3>"
     data += "<p>Our mission is to create a memorable coffee experience for every customer who walks through our doors.</p>"
@@ -46,7 +46,7 @@ function loadServices() {
     document.querySelector("#content").innerHTML = data;
 }
 
-function loadProducts1() {
+function loadProducts() {
     // html from Products.html
     var data = "<h3>Our Products</h3>"
     data += "<p>Explore our diverse range of coffee products, from freshly roasted beans to specialty blends.</p>"
@@ -55,15 +55,42 @@ function loadProducts1() {
     document.querySelector("#content").innerHTML = data;
 }
 
-function loadGallery1() {
+function loadGallery() {
     // html from Gallery.html
-    var data = "<h3>Gallery</h3>"
-    data += "<p>Explore our coffee shop through our gallery of images showcasing our ambiance, products, and events.</p>"
+const data = `
+<div class="gallery">
+  <div class="gallery-item">
+    <a target="_blank" href="https://spacebearswe.github.io/CoffeeShop/pics/caffee-latte.jpg">
+      <img src="https://spacebearswe.github.io/CoffeeShop/pics/caffee-latte.jpg" alt="Caffee Latte" width="600" height="400">
+    </a>
+    <div class="desc">Caffee Latte</div>
+  </div>
+  <div class="gallery-item">
+    <a target="_blank" href="https://spacebearswe.github.io/CoffeeShop/pics/cold-coffee.jpg">
+      <img src="https://spacebearswe.github.io/CoffeeShop/pics/cold-coffee.jpg" alt="Cold Coffee" width="600" height="400">
+    </a>
+    <div class="desc">Cold Coffee</div>
+  </div>
+  <div class="gallery-item">
+    <a target="_blank" href="https://spacebearswe.github.io/CoffeeShop/pics/black-coffee.jpg">
+      <img src="https://spacebearswe.github.io/CoffeeShop/pics/black-coffee.jpg" alt="Black Coffee" width="600" height="400">
+    </a>
+    <div class="desc">Black Coffee</div>
+  </div>
+  <div class="gallery-item">
+    <a target="_blank" href="https://spacebearswe.github.io/CoffeeShop/pics/cappuccino.jpg">
+      <img src="https://spacebearswe.github.io/CoffeeShop/pics/cappuccino.jpg" alt="Cappuccino" width="600" height="400">
+    </a>
+    <div class="desc">Cappuccino</div>
+  </div>
+</div>`;
 
-    document.querySelector("#content").innerHTML = data;
+document.querySelector("#content").innerHTML = data;
+
+
 }
 
-function loadContact1() {
+function loadContact() {
     // html from Contact.html
     var data = "<h3>Contact Us</h3>"
     data += "<p>If you have any questions or inquiries, feel free to reach out to us.</p>"
@@ -73,7 +100,7 @@ function loadContact1() {
 }
 
 
-function loadAbout() {
+function loadAboutFile() {
     fetch("https://spacebearswe.github.io/CoffeeShop/About.html")
         .then(response => {
             return response.text()
@@ -83,7 +110,7 @@ function loadAbout() {
         });
 }
 
-function loadProducts(){
+function loadProductsFile(){
     fetch("https://spacebearswe.github.io/CoffeeShop/Products.html")
         .then(response => {
             return response.text()
@@ -93,7 +120,7 @@ function loadProducts(){
         });
 }
 
-function loadServices() {
+function loadServicesFile() {
     fetch("https://spacebearswe.github.io/CoffeeShop/Services.html")
         .then(response => {
             return response.text()
@@ -103,7 +130,7 @@ function loadServices() {
         });
 }
 
-function loadContact() {
+function loadContactFile() {
     fetch("https://spacebearswe.github.io/CoffeeShop/Contact.html")
         .then(response => {
             return response.text()
@@ -112,7 +139,7 @@ function loadContact() {
             document.querySelector("#content").innerHTML = data;
         });
 }
-function loadGallery() {
+function loadGalleryFile() {
     fetch("https://spacebearswe.github.io/CoffeeShop/Gallery.html")
         .then(response => {
             return response.text()
