@@ -28,7 +28,7 @@ function loadAbout() {
     document.querySelector("#content").innerHTML = data;
 }
 
-function loadProducts() {
+function loadProducts1() {
     // html from Products.html
     var data = "<h3>Welcome to our coffee shop!</h3>"
     data += "<p>Our mission is to create a memorable coffee experience for every customer who walks through our doors.</p>"
@@ -46,7 +46,7 @@ function loadServices() {
     document.querySelector("#content").innerHTML = data;
 }
 
-function loadProducts() {
+function loadProducts1() {
     // html from Products.html
     var data = "<h3>Our Products</h3>"
     data += "<p>Explore our diverse range of coffee products, from freshly roasted beans to specialty blends.</p>"
@@ -55,7 +55,7 @@ function loadProducts() {
     document.querySelector("#content").innerHTML = data;
 }
 
-function loadGallery() {
+function loadGallery1() {
     // html from Gallery.html
     var data = "<h3>Gallery</h3>"
     data += "<p>Explore our coffee shop through our gallery of images showcasing our ambiance, products, and events.</p>"
@@ -63,7 +63,7 @@ function loadGallery() {
     document.querySelector("#content").innerHTML = data;
 }
 
-function loadContact() {
+function loadContact1() {
     // html from Contact.html
     var data = "<h3>Contact Us</h3>"
     data += "<p>If you have any questions or inquiries, feel free to reach out to us.</p>"
@@ -74,7 +74,7 @@ function loadContact() {
 
 
 function loadAboutFile() {
-    fetch("/CoffeeShop/artifacts/About.html")
+    fetch("https://spacebearswe.github.io/CoffeeShop/About.html")
         .then(response => {
             return response.text()
         })
@@ -83,8 +83,8 @@ function loadAboutFile() {
         });
 }
 
-function loadProductsFile() {
-    fetch("Products.html")
+function loadProducts(){
+    fetch("https://spacebearswe.github.io/CoffeeShop/Products.html")
         .then(response => {
             return response.text()
         })
@@ -93,8 +93,8 @@ function loadProductsFile() {
         });
 }
 
-function loadServicesFile() {
-    fetch("Services.html")
+function loadServices() {
+    fetch("https://spacebearswe.github.io/CoffeeShop/Services.html")
         .then(response => {
             return response.text()
         })
@@ -103,8 +103,8 @@ function loadServicesFile() {
         });
 }
 
-function loadContactFile() {
-    fetch("Contact.html")
+function loadContact() {
+    fetch("https://spacebearswe.github.io/CoffeeShop/Contact.html")
         .then(response => {
             return response.text()
         })
@@ -112,8 +112,8 @@ function loadContactFile() {
             document.querySelector("#content").innerHTML = data;
         });
 }
-function loadGalleryFile() {
-    fetch("/Gallery.html")
+function loadGallery() {
+    fetch("https://spacebearswe.github.io/CoffeeShop/Gallery.html")
         .then(response => {
             return response.text()
         })
