@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function () {
     loadGallery();
 });
 
-function loadAbout() {
+function loadAbout1() {
     // Load the About section content directly without fetching an external file
     // I have problems to load this content from an external file, 
     // so it's hardcoded here. as I don't find the right filepath in github pages.
@@ -73,7 +73,7 @@ function loadContact1() {
 }
 
 
-function loadAboutFile() {
+function loadAbout() {
     fetch("https://spacebearswe.github.io/CoffeeShop/About.html")
         .then(response => {
             return response.text()
